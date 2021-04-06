@@ -11,12 +11,12 @@ pipeline {
 					input('Do you want to proceed?')
 				}
 			}
-		stage('Three'){
-			when {
-				branch 'master'
-			}steps{
-				echo " This is master branch "	
+			stage('Three'){
+				when {
+					branch 'master'
+				}steps{
+					echo 'This is master branch'
+					}
 				}
-			}
 		}
 }

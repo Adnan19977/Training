@@ -19,7 +19,7 @@ pipeline {
 			stage('Four'){
 				steps{
 					echo 'Testing Now'
-					dir("com.example.test") {
+					dir("${env.WORKSPACE}/com.example.test") {
 						sh 'mvn test'
 					}
 				}

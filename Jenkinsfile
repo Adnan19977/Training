@@ -16,17 +16,11 @@ pipeline {
 					echo 'Testing Now'
 				}
 			}
-			stage ('four'){
-				parallel{
-					stage('unit test'){
-						steps{
-							echo "Running the unit test"
-						}
-					}
-					stage('integration test'){
-						steps{
-							echo ' Running the integration test .. '
-						}
+			stage('Four'){
+				steps{
+					echo 'Testing Now'
+					dir("com.example.test") {
+						sh 'mvn test'
 					}
 				}
 			}

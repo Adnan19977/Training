@@ -15,7 +15,7 @@ pipeline {
 			when {
 				branch 'master'
 			}steps{
-				echo " This is master branch " )	
+				echo " This is master branch "	
 				}
 			}
 		}

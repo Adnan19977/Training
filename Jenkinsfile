@@ -12,11 +12,23 @@ pipeline {
 				}
 			}
 			stage('Three'){
-				when {
-					branch 'master'
-				}steps{
-					echo 'This is master branch'
+				steps{
+					echo 'Testing Now'
+				}
+			}
+			stage ('four'){
+				parallel{
+					stage('unit test'){
+						steps{
+							echo "Running the unit test"
+						}
+					}
+					stage('integration test'){
+						steps{
+							echo ' Running the integration test .. '
+						}
 					}
 				}
+			}
 		}
 }

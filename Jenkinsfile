@@ -8,7 +8,15 @@ pipeline {
 			}
 			stage('two'){
 				steps{
-					input(' Do you want to proceed?')
+					input('Do you want to proceed?')
+				}
+			}
+		stage('Three'){
+			when {
+				not { branch "master" }
+			}steps{
+				echo " This is not master branch " )
+							
 				}
 			}
 		}

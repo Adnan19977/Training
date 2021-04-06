@@ -19,8 +19,8 @@ pipeline {
 			stage('Four'){
 				steps{
 					echo 'Testing Now'
-					dir("${env.WORKSPACE}/com.example.test") {
-						sh 'mvn test'
+					dir("com.example.test") {
+						bat 'mvn test'
 					}
 				}
 			}
